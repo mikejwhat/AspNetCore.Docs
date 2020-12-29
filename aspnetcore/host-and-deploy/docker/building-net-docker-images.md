@@ -210,9 +210,9 @@ ENTRYPOINT ["dotnet", "aspnetapp.dll"]
 ::: moniker range=">= aspnetcore-3.0"
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0 AS runtime
+FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS runtime
 WORKDIR /app
-COPY published/aspnetapp.dll ./
+COPY published .
 ENTRYPOINT ["dotnet", "aspnetapp.dll"]
 ```
 
